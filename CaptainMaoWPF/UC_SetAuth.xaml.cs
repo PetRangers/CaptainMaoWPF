@@ -125,6 +125,85 @@ namespace CaptainMaoWPF
         {
             try
             {
+                List<SetAuthViewModel> setAuthList = (List<SetAuthViewModel>)this.setAuthViewSource.Source;
+
+                foreach (var model in setAuthList)
+                {
+                    var user = dataentity.AspNetUsers.Where(u => u.Id == model.Id).First();
+
+                    user.Experience = model.Experience;
+
+                    var userRoles = user.AspNetRoles.ToList();
+                    string roles = "";
+                    foreach (var r in userRoles)
+                    {
+                        roles += r.Name;
+                    }
+
+                    if (model.IsAdmin && !roles.Contains("Admin"))
+                    {
+                        user.AspNetRoles.Add(dataentity.AspNetRoles.Where(r => r.Name == "Admin").First());
+                    }
+                    else if (!model.IsAdmin && roles.Contains("Admin"))
+                    {
+                        user.AspNetRoles.Remove(dataentity.AspNetRoles.Where(r => r.Name == "Admin").First());
+                    }
+
+                    if (model.IsMaster && !roles.Contains("Master"))
+                    {
+                        user.AspNetRoles.Add(dataentity.AspNetRoles.Where(r => r.Name == "Master").First());
+                    }
+                    else if (!model.IsMaster && roles.Contains("Master"))
+                    {
+                        user.AspNetRoles.Remove(dataentity.AspNetRoles.Where(r => r.Name == "Master").First());
+                    }
+
+                    if (model.IsStore && !roles.Contains("Store"))
+                    {
+                        user.AspNetRoles.Add(dataentity.AspNetRoles.Where(r => r.Name == "Store").First());
+                    }
+                    else if (!model.IsStore && roles.Contains("Store"))
+                    {
+                        user.AspNetRoles.Remove(dataentity.AspNetRoles.Where(r => r.Name == "Store").First());
+                    }
+
+                    if (model.IsNormal && !roles.Contains("Normal"))
+                    {
+                        user.AspNetRoles.Add(dataentity.AspNetRoles.Where(r => r.Name == "Normal").First());
+                    }
+                    else if (!model.IsNormal && roles.Contains("Normal"))
+                    {
+                        user.AspNetRoles.Remove(dataentity.AspNetRoles.Where(r => r.Name == "Normal").First());
+                    }
+
+                    if (model.IsInactivated && !roles.Contains("Inactivated"))
+                    {
+                        user.AspNetRoles.Add(dataentity.AspNetRoles.Where(r => r.Name == "Inactivated").First());
+                    }
+                    else if (!model.IsInactivated && roles.Contains("Inactivated"))
+                    {
+                        user.AspNetRoles.Remove(dataentity.AspNetRoles.Where(r => r.Name == "Inactivated").First());
+                    }
+
+                    if (model.IsBoardDogMaster && (dataentity.Boards.Where(b => b.BoardName == "狗").First().MasterUserID != model.Id))
+                    {
+                        dataentity.Boards.Where(b => b.BoardName == "狗").First().MasterUserID = model.Id;
+                    }
+                    else if (!model.IsBoardDogMaster && (dataentity.Boards.Where(b => b.BoardName == "狗").First().MasterUserID == model.Id))
+                    {
+                        dataentity.Boards.Where(b => b.BoardName == "狗").First().MasterUserID = null;
+                    }
+
+                    if (model.IsBoardCatMaster && (dataentity.Boards.Where(b => b.BoardName == "貓").First().MasterUserID != model.Id))
+                    {
+                        dataentity.Boards.Where(b => b.BoardName == "貓").First().MasterUserID = model.Id;
+                    }
+                    else if (!model.IsBoardCatMaster && (dataentity.Boards.Where(b => b.BoardName == "貓").First().MasterUserID == model.Id))
+                    {
+                        dataentity.Boards.Where(b => b.BoardName == "貓").First().MasterUserID = null;
+                    }
+                }
+                
                 this.dataentity.SaveChanges();
             }
             catch (Exception ex)

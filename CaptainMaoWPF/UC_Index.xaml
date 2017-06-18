@@ -3,19 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              xmlns:local="clr-namespace:CaptainMaoWPF"
              mc:Ignorable="d" >
-    <Viewbox Stretch="Fill">
+    <Viewbox Stretch="Uniform">
         <Grid Height="869" Width="1592">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0" Background="gray">
-                <Button Name="btnEditNormalUserProfile" Content="修改一般會員資料" Margin="10" Click="btnEditNormalUserProfile_Click" FontSize="18"/>
-                <Button Name="btnEditStoreUserProfile" Content="修改商店會員資料" Margin="10" FontSize="18"/>
-                <Button Name="btnEditUserAuth" Content="修改會員權限" Margin="10" FontSize="18" Click="btnEditUserAuth_Click"/>
-                <Button Name="btnViewWebStat" Content="檢視網站統計資料" Margin="10" FontSize="18" Click="btnViewWebStat_Click"/>
+            <StackPanel Grid.Column="0" Background="#FF703D00">
+                <Button Name="btnEditNormalUserProfile" Content="修改一般會員資料" Margin="10" Click="btnEditNormalUserProfile_Click" FontSize="18" Background="#FFFBFFF0" />
+                <Button Name="btnEditStoreUserProfile" Content="修改商店會員資料" Margin="10" FontSize="18" Background="#FFFBFFF0"/>
+                <Button Name="btnEditUserAuth" Content="修改會員權限" Margin="10" FontSize="18" Click="btnEditUserAuth_Click" Background="#FFFBFFF0"/>
+                <Button Name="btnViewWebStat" Content="檢視網站統計資料" Margin="10" FontSize="18" Click="btnViewWebStat_Click" Background="#FFFBFFF0"/>
             </StackPanel>
             <Grid Name="gridAdministrator" Grid.Column="1" Background="White"/>
         </Grid>

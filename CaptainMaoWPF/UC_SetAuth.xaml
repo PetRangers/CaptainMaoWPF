@@ -68,10 +68,7 @@
                                         EditingElementStyle="{DynamicResource MetroDataGridCheckBox}"
                                         Header="貓版版主"  x:Name="IsBoardCatMasterColumn" 
                                         Binding="{Binding IsBoardCatMaster, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-
-
-
-                    </DataGrid.Columns>
+                        </DataGrid.Columns>
                 </DataGrid>
             </ScrollViewer>
 

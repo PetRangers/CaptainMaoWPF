@@ -126,15 +126,7 @@ namespace CaptainMaoWPF
             ////dataentity.NormalUsers.Local.Add(new Model.NormalUser {  });
             ////btnLast_Click(sender, e);
         }
-
-        //private void btnDelete_Click(object sender, RoutedEventArgs e)
-        //{
-        //    dataentity.NormalUsers.Local.Remove((Model.NormalUser)this.normalUserViewSource.View.CurrentItem);
-        //    //this.normalUserViewSource.View.Refresh();
-        //    btnSearch_Click(sender, e);
-        //    //this.normalUserDataGrid.ScrollIntoView(this.normalUserViewSource.View.CurrentItem);
-        //}
-
+        
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             try

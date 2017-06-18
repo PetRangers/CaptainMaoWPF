@@ -27,18 +27,18 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal">
-                <TextBlock Text="搜尋Username:" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" FontSize="14"/>
-                <TextBox x:Name="tbSearchCondition" Margin="5" MinWidth="60" FontSize="14" TabIndex="1"/>
-                <Button x:Name="btnSearch" Content="搜尋" Margin="5" Click="btnSearch_Click" Style="{StaticResource AccentedSquareButtonStyle}"/>
-                <Button x:Name="btnFirst" Content="第一筆" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnFirst_Click"/>
-                <Button x:Name="btnPrevious" Content="上一筆" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnPrevious_Click"/>
-                <Button x:Name="btnNext" Content="下一筆" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnNext_Click"/>
-                <Button x:Name="btnLast" Content="最後一筆" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnLast_Click"/>
-                <Button x:Name="btnNew" Content="新增" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnNew_Click"/>
-                <Button x:Name="btnUpdate" Content="儲存編輯" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnUpdate_Click"/>
+                <TextBlock Text="搜尋帳號:" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" FontSize="18"/>
+                <TextBox x:Name="tbSearchCondition" Margin="5" MinWidth="60" FontSize="18" TabIndex="1"/>
+                <Button x:Name="btnSearch" Content="搜尋" Margin="5" Click="btnSearch_Click" Style="{StaticResource AccentedSquareButtonStyle}" FontSize="18"/>
+                <Button x:Name="btnFirst" Content="第一筆" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnFirst_Click" FontSize="18"/>
+                <Button x:Name="btnPrevious" Content="上一筆" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnPrevious_Click" FontSize="18"/>
+                <Button x:Name="btnNext" Content="下一筆" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnNext_Click" FontSize="18"/>
+                <Button x:Name="btnLast" Content="最後一筆" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnLast_Click" FontSize="18"/>
+                <Button x:Name="btnNew" Content="新增" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnNew_Click" FontSize="18"/>
+                <Button x:Name="btnUpdate" Content="儲存編輯" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnUpdate_Click" FontSize="18"/>
             </StackPanel>
 
-            <Grid x:Name="grid1" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="389" Width="301" Margin="0,0,-20,0">
+            <Grid x:Name="grid1" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Margin="10,0,0,0" Background="White">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -51,80 +51,79 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Label Content="名" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
-                <TextBox x:Name="firstnameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" Text="{Binding FirstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="200" TabIndex="4"/>
-                <Label Content="ID" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
-                <TextBlock x:Name="idTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding Id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="200"/>
-                <Label Content="姓" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
-                <TextBox x:Name="lastnameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding LastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="200" TabIndex="3"/>
-                <Label Content="行動電話" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center"/>
-                <TextBox x:Name="mobileTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="5" Text="{Binding PhoneNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="200" TabIndex="5"/>
-                <Label Content="照片" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-                <StackPanel Grid.Column="1" Margin="43,3" Orientation="Vertical" Grid.Row="0">
-                    <Image x:Name="imgProfilePicture" Height="120" Width="120" Margin="3" Source="{Binding Photo}"/>
+                <Label Content="名" Grid.Column="0" HorizontalAlignment="Right" Margin="3" Grid.Row="4" VerticalAlignment="Center" FontSize="14" Foreground="#FF1100B6"/>
+                <TextBox x:Name="firstnameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" Text="{Binding FirstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="200" TabIndex="4" FontSize="14"/>
+                <Label Content="ID" Grid.Column="0" HorizontalAlignment="Right" Margin="3" Grid.Row="1" VerticalAlignment="Center" FontSize="14" Foreground="#FF1100B6"/>
+                <TextBlock x:Name="idTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="1" Text="{Binding Id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="150" Width="200" FontSize="11" TextTrimming="CharacterEllipsis"/>
+                <Label Content="姓" Grid.Column="0" HorizontalAlignment="Right" Margin="3" Grid.Row="3" VerticalAlignment="Center" FontSize="14" Foreground="#FF1100B6"/>
+                <TextBox x:Name="lastnameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding LastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="200" TabIndex="3" FontSize="14"/>
+                <Label Content="行動電話" Grid.Column="0" HorizontalAlignment="Right" Margin="3" Grid.Row="5" VerticalAlignment="Center" FontSize="14" Foreground="#FF1100B6"/>
+                <TextBox x:Name="mobileTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="5" Text="{Binding PhoneNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="200" TabIndex="5" FontSize="14"/>
+                <Label Content="照片" Grid.Column="0" HorizontalAlignment="Right" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14" Foreground="#FF1100B6"/>
+                <StackPanel Grid.Column="1" Orientation="Vertical" Grid.Row="0" Margin="3" >
+                    <Image x:Name="imgProfilePicture" Height="150" Width="150" Margin="3" Source="{Binding Photo}"/>
                     <Button x:Name="btnBrowsePic" Content="瀏覽" Margin="3" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnBrowsePic_Click"/>
                 </StackPanel>
-                <Label Content="註冊日期" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="7" VerticalAlignment="Center"/>
-                <DatePicker x:Name="registrationDateDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="7" SelectedDate="{Binding DateRegistered, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="200" TabIndex="7"/>
-                <Label Content="電子郵件(帳號)" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
-                <TextBox x:Name="usernameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding UserName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="200" TabIndex="2"/>
+                <Label Content="註冊日期" Grid.Column="0" HorizontalAlignment="Right" Margin="3" Grid.Row="6" VerticalAlignment="Center" FontSize="14" Foreground="#FF1100B6"/>
+                <DatePicker x:Name="registrationDateDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="6" SelectedDate="{Binding DateRegistered, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="200" TabIndex="7" FontSize="14"/>
+                <Label Content="電子郵件" Grid.Column="0" HorizontalAlignment="Right" Margin="3" Grid.Row="2" VerticalAlignment="Center" FontSize="14" Foreground="#FF1100B6"/>
+                <TextBox x:Name="usernameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding UserName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MinWidth="200" TabIndex="2" FontSize="14"/>
             </Grid>
             <Grid Background="AliceBlue" Grid.Row="2"/>
             <ScrollViewer Grid.Row="1" Margin="0,0,0,0" VerticalScrollBarVisibility="Auto" Height="830">
-                <DataGrid x:Name="normalUserDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected">
+                <DataGrid x:Name="normalUserDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" AlternatingRowBackground="#FFFFDC90" FontSize="14">
                     <DataGrid.Columns>
-                        <DataGridTemplateColumn x:Name="EmailConfirmedColumn" Header="電子郵件(帳號)" Width="SizeToCells">
+                        <DataGridTemplateColumn x:Name="EmailConfirmedColumn" Header="電子郵件(帳號)" >
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox Content="{Binding UserName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" IsChecked="{Binding EmailConfirmed, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                    <CheckBox Content="{Binding UserName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" IsChecked="{Binding EmailConfirmed, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" ToolTip="電子郵件驗證" FontSize="14"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTextColumn x:Name="lastnameColumn" Binding="{Binding LastName}" Header="姓" Width="SizeToCells"/>
-                        <DataGridTextColumn x:Name="firstnameColumn" Binding="{Binding FirstName}" Header="名" Width="SizeToCells"/>
+                        <DataGridTextColumn x:Name="lastnameColumn" Binding="{Binding LastName}" Header="姓"/>
+                        <DataGridTextColumn x:Name="firstnameColumn" Binding="{Binding FirstName}" Header="名"/>
                         <DataGridTemplateColumn x:Name="photoColumn" Header="照片">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Image Source="{Binding Photo}" Height="60"/>
+                                    <Image Source="{Binding Photo}" Height="70"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTemplateColumn x:Name="PhoneNumberConfirmedColumn" Header="手機" Width="SizeToCells">
+                        <DataGridTemplateColumn x:Name="PhoneNumberConfirmedColumn" Header="手機">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox Content="{Binding PhoneNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" IsChecked="{Binding PhoneNumberConfirmed, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                    <CheckBox Content="{Binding PhoneNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" IsChecked="{Binding PhoneNumberConfirmed, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" ToolTip="手機驗證" FontSize="14"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTemplateColumn x:Name="registrationDateColumn" Header="註冊日期" Width="SizeToCells">
+                        <DataGridTemplateColumn x:Name="registrationDateColumn" Header="註冊日期">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <DatePicker SelectedDate="{Binding DateRegistered, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTextColumn x:Name="ExperienceColumn" Binding="{Binding Experience}" Header="經驗值" Width="SizeToHeader"/>
-                        <DataGridTemplateColumn x:Name="TwoFactorEnabledColumn" Header="雙因素驗證" Width="SizeToHeader">
+                        <my:DataGridNumericUpDownColumn x:Name="ExperienceColumn" Binding="{Binding Experience}" Header="經驗值" FontSize="14"/>
+                        <DataGridTemplateColumn x:Name="TwoFactorEnabledColumn" Header="雙因素驗證">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox IsChecked="{Binding TwoFactorEnabled, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                    <CheckBox IsChecked="{Binding TwoFactorEnabled, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" ToolTip="雙因素驗證"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTemplateColumn x:Name="LockoutEnabledColumn" Header="登入鎖定" Width="SizeToHeader">
+                        <DataGridTemplateColumn x:Name="LockoutEnabledColumn" Header="開啟登入鎖定">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox IsChecked="{Binding LockoutEnabled, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                    <CheckBox IsChecked="{Binding LockoutEnabled, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" ToolTip="開啟登入鎖定功能"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTextColumn x:Name="AccessFailedCountColumn" Binding="{Binding AccessFailedCount}" Header="登入失敗" Width="SizeToCells"/>
-                        <DataGridTemplateColumn x:Name="LockoutEndDateUtcColumn" Header="登入鎖定結束" Width="SizeToHeader">
+                        <DataGridTextColumn x:Name="AccessFailedCountColumn" Binding="{Binding AccessFailedCount}" Header="登入失敗"/>
+                        <DataGridTemplateColumn x:Name="LockoutEndDateUtcColumn" Header="登入鎖定結束">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <xctk:TimePicker Value="{Binding LockoutEndDateUtc, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                    <xctk:DateTimePicker Value="{Binding LockoutEndDateUtc, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" ToolTip="登入鎖定結束時間"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
