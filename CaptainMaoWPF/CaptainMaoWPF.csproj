@@ -258,6 +258,7 @@
     <Resource Include="images\favicon.ico" />
     <Resource Include="images\paw.png" />
     <Resource Include="images\profile_default.jpg" />
+    <Resource Include="images\maoSecurity.png" />
     <Content Include="Model\MaoModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MaoModel.Context.cs</LastGenOutput>

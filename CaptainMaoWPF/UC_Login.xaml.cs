@@ -28,10 +28,10 @@ namespace CaptainMaoWPF
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            //switch (AdminUtilities.ValidateUser(tbUsername.Text, tbPassword.Password))
-            //{
-            //    case AdminUtilities.LogonErrorTypes.ValidUser:
-            Window mainWindow = Application.Current.MainWindow;
+            switch (AdminUtilities.ValidateUser(tbUsername.Text, tbPassword.Password))
+            {
+                case AdminUtilities.LogonErrorTypes.ValidUser:
+                    Window mainWindow = Application.Current.MainWindow;
             MainWindow.CurrentUser = tbUsername.Text;
             await ((MainWindow)mainWindow).ShowMessageAsync("毛孩隊長寵物網後臺管理介面", $"網站管理員【{MainWindow.CurrentUser}】您好!", MessageDialogStyle.Affirmative, new MetroDialogSettings { ColorScheme = MetroDialogColorScheme.Accented, AffirmativeButtonText = "開始", DialogTitleFontSize = 48 });
 
@@ -39,25 +39,31 @@ namespace CaptainMaoWPF
                     MainWindow.mainUC = new UC_Index();
                     ((MainWindow)mainWindow).showGrid.Children.Add(MainWindow.mainUC);
 
-            //        break;
-            //    case AdminUtilities.LogonErrorTypes.LackOfUsername:
-            //        MessageBox.Show("請輸入使用者名稱。");
-            //        break;
-            //    case AdminUtilities.LogonErrorTypes.LackOfPassword:
-            //        MessageBox.Show("請輸入密碼。");
-            //        break;
-            //    case AdminUtilities.LogonErrorTypes.InvalidUser:
-            //        MessageBox.Show("密碼錯誤", "警告訊息", MessageBoxButton.OK, MessageBoxImage.Stop);
-            //        break;
-            //    case AdminUtilities.LogonErrorTypes.UserNotExist:
-            //        MessageBox.Show("使用者不存在。");
-            //        break;
-            //    case AdminUtilities.LogonErrorTypes.Unauthorized:
-            //        MessageBox.Show("您沒有管理者權限。");
-            //        break;
-            //    default:
-            //        break;
-            //}
+                    break;
+                case AdminUtilities.LogonErrorTypes.LackOfUsername:
+                    MessageBox.Show("請輸入使用者名稱。");
+                    break;
+                case AdminUtilities.LogonErrorTypes.LackOfPassword:
+                    MessageBox.Show("請輸入密碼。");
+                    break;
+                case AdminUtilities.LogonErrorTypes.InvalidUser:
+                    MessageBox.Show("密碼錯誤", "警告訊息", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    break;
+                case AdminUtilities.LogonErrorTypes.UserNotExist:
+                    MessageBox.Show("使用者不存在。");
+                    break;
+                case AdminUtilities.LogonErrorTypes.Unauthorized:
+                    MessageBox.Show("您沒有管理者權限。");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void btnDemo_Click(object sender, RoutedEventArgs e)
+        {
+            tbUsername.Text = "admin@mao.com";
+            tbPassword.Password = "qqq123";
         }
     }
 }

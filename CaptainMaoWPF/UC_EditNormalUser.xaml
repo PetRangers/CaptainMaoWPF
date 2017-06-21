@@ -28,7 +28,7 @@
             </Grid.RowDefinitions>
             <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal">
                 <TextBlock Text="搜尋帳號:" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" FontSize="18"/>
-                <TextBox x:Name="tbSearchCondition" Margin="5" MinWidth="60" FontSize="18" TabIndex="1"/>
+                <TextBox x:Name="tbSearchCondition" Margin="5" MinWidth="60" FontSize="18" TabIndex="1" Width="150"/>
                 <Button x:Name="btnSearch" Content="搜尋" Margin="5" Click="btnSearch_Click" Style="{StaticResource AccentedSquareButtonStyle}" FontSize="18"/>
                 <Button x:Name="btnFirst" Content="第一筆" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnFirst_Click" FontSize="18"/>
                 <Button x:Name="btnPrevious" Content="上一筆" Margin="5" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnPrevious_Click" FontSize="18"/>
@@ -123,7 +123,7 @@
                         <DataGridTemplateColumn x:Name="LockoutEndDateUtcColumn" Header="登入鎖定結束">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <xctk:DateTimePicker Value="{Binding LockoutEndDateUtc, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" ToolTip="登入鎖定結束時間"/>
+                                    <xctk:DateTimePicker Value="{Binding LockoutEndDateUtc, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" ToolTip="登入鎖定結束時間"  Width="110"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
